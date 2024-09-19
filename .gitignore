@@ -1,6 +1,6 @@
-/.csv
+*.csv
 
-/.csv.xls
+*.csv.xls
 
 .venv
 
