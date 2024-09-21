@@ -1,5 +1,7 @@
 *.csv
 
+!reviews.csv
+
 *.csv.xls
 
 .venv
@@ -7,3 +9,4 @@
 /pycache/
 
 .env
+
