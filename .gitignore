@@ -12,4 +12,6 @@
 
 *.ipynb
 
-.idea
+node_modules/
+
+.idea/
