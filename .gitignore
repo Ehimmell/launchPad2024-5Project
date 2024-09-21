@@ -7,3 +7,5 @@
 /pycache/
 
 .idea
+
+.env
