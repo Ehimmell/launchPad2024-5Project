@@ -1,0 +1,13 @@
+.word-wrap {
+  word-wrap: break-word;
+  max-width:95%;
+}
+
+.answer-container-1 {
+  margin-left: 5%;
+  margin-bottom:2%;
+}
+
+.question-1 {
+  font-style:italic;
+}
