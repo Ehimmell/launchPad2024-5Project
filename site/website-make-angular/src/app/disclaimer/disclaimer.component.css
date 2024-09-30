@@ -2,3 +2,17 @@
   word-wrap: break-word;
   max-width:95%;
 }
+
+.warning-container-1 {
+  display:flex;
+  align-items:center;
+}
+
+.warning-container-1 > * {
+  margin-right:2%;
+}
+
+.exclamation-1 {
+  font-size:300%;
+  color:red;
+}

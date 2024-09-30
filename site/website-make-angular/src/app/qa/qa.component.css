@@ -11,3 +11,17 @@
   word-wrap: break-word;
   max-width:90%;
 }
+
+.header-container-1 {
+  display:flex;
+  align-items:center;
+}
+
+.header-container-1 > * {
+  margin-right:2%;
+}
+
+.exclamation-1 {
+  font-size:300%;
+  color:red;
+}
