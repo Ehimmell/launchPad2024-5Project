@@ -74,7 +74,7 @@
     justify-content: center;
   }
 
-  .qa-container-1 {
+  .grey-front-blurb-container-1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:white;
     width:70%;
@@ -117,6 +117,20 @@
   .italic {
     font-style: italic;
   }
+
+  .sample-header-container-1 {
+  display:flex;
+  align-items:center;
+}
+
+.sample-header-container-1 > * {
+  margin-right:2%;
+}
+
+.monitor-1 {
+  font-size:300%;
+}
+
 </style>
 
 <div class="fountain-container-1">
@@ -136,11 +150,21 @@
 <div class = "bar-container-1">
   <app-searchbar></app-searchbar>
 </div>
-<div class = "qa-container-1">
+<div class = "grey-front-blurb-container-1">
   <app-qa></app-qa>
 </div>
 <div class = "disclaimer-container-1">
   <app-disclaimer></app-disclaimer>
+</div>
+<div class = "grey-front-blurb-container-1">
+  <div class = "sample-header-container-1">
+    <h1>Sample Professor Info</h1>
+    <div class = "monitor-1">🖥️</div>
+  </div>
+  <app-professor-card
+    [GPA] = "3.5"
+    [summary] = "'Great professor, but the class is hard.  Make sure to study!'"
+  ></app-professor-card>
 </div>
 
 
