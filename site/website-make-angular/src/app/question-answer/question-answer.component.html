@@ -1,6 +1,9 @@
 <div class = "wordwrap">
-  <p class = "question-1">{{question}}</p>
-  <div class = "answer-container-1">
+  <div class = "question-container-1">
+    <p class = "question-1">{{question}}</p>
+    <button class = "question-dropdown-button-1" (click) = "toggleAnswer()">{{dropDownCarat}}</button>
+  </div>
+  <div *ngIf="answerVis" class = "answer-container-1">
       <p>{{answer}}</p>
   </div>
 </div>

@@ -11,3 +11,18 @@
 .question-1 {
   font-style:italic;
 }
+
+.question-container-1 {
+  display:flex;
+}
+
+.question-container-1 > * {
+  margin-right:2%;
+}
+
+.question-dropdown-button-1 {
+  background:none;
+  border:none;
+  font-size:150%;
+  color:white;
+}
