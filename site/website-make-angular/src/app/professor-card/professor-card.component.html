@@ -1,9 +1,18 @@
 <div class = "professor-card-container-1">
   <h1 class = "name">{{name}}  🍎</h1>
   <div class = "gpa-container-1">
-    <p>Average GPA:</p>
+    <p>Class 101 Average GPA:</p>
     <h3>{{GPA}}</h3>
   </div>
+      <app-sliding-chart
+      [uniAvg] = "3"
+      [classAvg] = "3.5">
+    </app-sliding-chart>
   <h2>Review Summary:</h2>
   <p>{{summary}}</p>
+  <div class = "legend-container-1">
+    <p><em>Graph Legend:</em></p>
+    <p>Yellow: Class GPA</p>
+    <p>Black: University GPA</p>
+  </div>
 </div>
