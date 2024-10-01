@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input, SimpleChanges} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {SlidingChartComponent} from "../sliding-chart/sliding-chart.component";
 
@@ -10,7 +10,15 @@ import {SlidingChartComponent} from "../sliding-chart/sliding-chart.component";
   styleUrl: './professor-card.component.css'
 })
 export class ProfessorCardComponent {
-  @Input() GPA: number = 0;
+  @Input() classes: string[] = ['Mystery Class 1'];
+  @Input() GPAs: number[] = [0];
   @Input() summary: string = 'No summary- yet!';
   @Input() name: string = 'Mystery Professor';
+  classesEqualGPAs: boolean = true;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['classes'] || changes['GPAs']) {
+      this.classesEqualGPAs = this.classes.length === this.GPAs.length;
+    }
+  }
 }

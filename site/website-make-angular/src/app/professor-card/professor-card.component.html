@@ -1,16 +1,21 @@
-<div class = "professor-card-container-1">
-  <h1 class = "name">{{name}}  🍎</h1>
-  <div class = "gpa-container-1">
-    <p>Class 101 Average GPA:</p>
-    <h3>{{GPA}}</h3>
-  </div>
+<div class="professor-card-container-1">
+  <h1 class="name">{{name}}  🍎</h1>
+  <div *ngIf="classesEqualGPAs">
+    <div *ngFor="let profClass of classes; let i = index" class="gpa-container-1">
+      <div class="gpa-numerical-container-1">
+        <p>{{profClass}} Average GPA:</p>
+        <h3>{{GPAs[i]}}</h3>
+      </div>
       <app-sliding-chart
-      [uniAvg] = "3"
-      [classAvg] = "3.5">
-    </app-sliding-chart>
+        [uniAvg]="3"
+        [classAvg]="GPAs[i]">
+      </app-sliding-chart>
+    </div>
+  </div>
+  <p *ngIf="!classesEqualGPAs">Error loading GPAs per class!</p>
   <h2>Review Summary:</h2>
   <p>{{summary}}</p>
-  <div class = "legend-container-1">
+  <div class="legend-container-1">
     <p><em>Graph Legend:</em></p>
     <p>Yellow: Class GPA</p>
     <p>Black: University GPA</p>

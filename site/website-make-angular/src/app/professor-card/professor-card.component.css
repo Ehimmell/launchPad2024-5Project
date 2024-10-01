@@ -26,8 +26,15 @@
 }
 
 .gpa-container-1 {
-  display: flex;
+}
+
+.gpa-numerical-container-1 {
+  display:flex;
   align-items:center;
+}
+
+.gpa-numerical-container-1 > * {
+  margin-right:3%;
 }
 
 .gpa-container-1 > * {
