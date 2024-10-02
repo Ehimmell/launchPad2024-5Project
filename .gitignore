@@ -20,4 +20,13 @@ node_modules/
 
 .DS_Store
 
-!professorNames.csv
+!profNames.csv
+
+/target/
+
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+.idea/
+
+*.iml
