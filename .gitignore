@@ -19,3 +19,14 @@ node_modules/
 /.DS_Store
 
 .DS_Store
+
+!profNames.csv
+
+/target/
+
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+.idea/
+
+*.iml
