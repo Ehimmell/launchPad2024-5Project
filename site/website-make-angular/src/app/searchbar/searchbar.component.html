@@ -1,1 +1,9 @@
-<input class = "searchbar-1" type = "text" placeholder = "Search">
+<div class = "search-1">
+  <input id = 'nameInput' class="searchbar-1" type="text" placeholder="Mystery Professor" [(ngModel)]="name">
+  <div class = "results-list-1" *ngIf="results.length > 0">
+    <div *ngFor="let result of results" class = "search-result-1">
+      <p class = "result-1">{{result}}</p>
+    </div>
+  </div>
+  <button class = "searchbar-1" (click)="onSearch()">Search</button>
+</div>

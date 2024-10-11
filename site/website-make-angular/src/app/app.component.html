@@ -151,45 +151,36 @@
 </div>
 <div class="title-container-1">
   <div class="title-container-2">
-    <h1 class = "italic">BoilerReviews</h1>
+    <h1 class="italic">BoilerReviews</h1>
   </div>
 </div>
-<div class = "preview-parent-1">
-  <div class = "preview-container-1">
-    <h3 class = "preview-1">Quick Summaries and Statistics about your favorite Purdue Professors</h3>
-    <p class = "preview-2">Enter a professor's name to get started!</p>
+<div class="preview-parent-1">
+  <div class="preview-container-1">
+    <h3 class="preview-1">Quick Summaries and Statistics about your favorite Purdue Professors</h3>
+    <p class="preview-2">Enter a professor's name to get started!</p>
   </div>
 </div>
-<div class = "bar-container-1">
+<div class="bar-container-1">
   <app-searchbar></app-searchbar>
 </div>
-<div class = "grey-front-blurb-container-1-top">
+<div class="grey-front-blurb-container-1-top">
   <app-qa></app-qa>
 </div>
-<div class = "disclaimer-container-1">
+<div class="disclaimer-container-1">
   <app-disclaimer></app-disclaimer>
 </div>
-<div class = "grey-front-blurb-container-1">
-  <div class = "sample-header-container-1">
+<div class="grey-front-blurb-container-1">
+  <div class="sample-header-container-1">
     <h1>Sample Professor Info</h1>
-    <div class = "monitor-1">🖥️</div>
+    <div class="monitor-1">🖥️</div>
   </div>
   <app-professor-card
-    [GPAs] = "[3.5, 3.7, 2.5]"
-    [classes] = "['CS 700', 'STAT 999', 'MA 000']"
-    [summary] = "'Great professor, but the class is hard.  Make sure to study!'"
+    [GPAs]="[3.5, 3.7, 2.5]"
+    [classes]="['CS 700', 'STAT 999', 'MA 000']"
+    [summary]="'Great professor, but the class is hard. Make sure to study!'"
   ></app-professor-card>
 </div>
-
-
-
-
-
-
-
-
-
-<div class = "space-container-1">
-  <p class = "space"></p>
+<div class="space-container-1">
+  <p class="space"></p>
 </div>
 <router-outlet />
