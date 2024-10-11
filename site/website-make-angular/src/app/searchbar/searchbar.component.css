@@ -1,6 +1,25 @@
+.search-1 {
+  margin:0;
+}
 .searchbar-1 {
-  display:block;
+  display: block;
   width: 30vw;
   height: 7vh;
   border-radius: 0.4vw;
+  margin-bottom:0;
+  position:relative;
+  z-index:2;
+}
+
+.results-list-1 {
+  margin-top:0;
+  background-color:white;
+  position:relative;
+  z-index:3;
+}
+
+.result-1 {
+  color:black;
+  margin-left:5%;
+  font-family: 'Helvetica Neue', sans-serif;
 }

@@ -26,12 +26,10 @@ export class SlidingChartComponent implements AfterViewInit {
   }
 
   initializeChart() {
-    // Register necessary components
     Chart.register(LinearScale, CategoryScale, LineController, LineElement, PointElement, Filler, annotationPlugin);
 
     const context = this.gpaChartRef.nativeElement.getContext('2d');
 
-    // Create gradient background
     // @ts-ignore
     const gradient = context.createLinearGradient(0, 0, context.canvas.width, 0);
     gradient.addColorStop(0, 'red');
@@ -103,7 +101,7 @@ export class SlidingChartComponent implements AfterViewInit {
           legend: {
             display: true,
             labels: {
-              generateLabels: (chart) => {
+              generateLabels: (chart:any) => {
                 // @ts-ignore
                 const annotations = chart.options.plugins.annotation.annotations;
                 return [
