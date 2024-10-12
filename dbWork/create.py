@@ -6,10 +6,10 @@ cursor = connection.cursor()
 
 cursor.execute('\n'
                'CREATE TABLE professors (\n'
-               '    id INTEGER PRIMARY KEY,\n'
+               '    id TEXT PRIMARY KEY,\n'
                '    name TEXT,\n'
                '    summary TEXT,\n'
-               '    classListId INTEGER\n'
+               '    classListId TEXT\n'
                ')\n')
 
 connection.close()
