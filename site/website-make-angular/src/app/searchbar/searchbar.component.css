@@ -12,11 +12,28 @@
   z-index:2;
 }
 
+.searchbar-1:hover {
+  color:#ceb888;
+}
+
 .results-list-1 {
   margin-top:0;
   background-color:white;
   position:relative;
   z-index:3;
+}
+
+.no-button-deco-1 {
+  background-color:white;
+  border:none;
+  color:black;
+  font-family: 'Helvetica Neue', sans-serif;
+  position:relative;
+  z-index:4;
+}
+
+.no-button-deco-1:hover {
+  color:#ceb888;
 }
 
 .result-1 {

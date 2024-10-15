@@ -2,7 +2,7 @@
   <input id = 'nameInput' class="searchbar-1" type="text" placeholder="Mystery Professor" [(ngModel)]="name">
   <div class = "results-list-1" *ngIf="results.length > 0">
     <div *ngFor="let result of results" class = "search-result-1">
-      <p class = "result-1">{{result}}</p>
+      <button class = "no-button-deco-1">{{result}}</button>
     </div>
   </div>
   <button class = "searchbar-1" (click)="onSearch()">Search</button>
