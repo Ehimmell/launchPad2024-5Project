@@ -36,7 +36,7 @@ def insert(professorName):
     insertClass(classGradePairs, id)
 
 
-insert('Kenji Matsuki')
+insert('Andrew Freed')
 
 
 

@@ -38,11 +38,23 @@ def scrape(profName):
 
     classesSeen = set()
 
-    for i in range(len(classes)):
-        if classes[i] not in classesSeen:
-            correctedClasses.append(classes[i])
-            classesSeen.add(classes[i])
-            correctedGrades.append(grades[i + 1])
+    print(classes)
+    print(grades)
+
+    if len(classes) != len(grades):
+
+        for i in range(len(classes)):
+            if classes[i] not in classesSeen:
+                correctedClasses.append(classes[i])
+                classesSeen.add(classes[i])
+                correctedGrades.append(grades[i + 1])
+
+    else:
+        for i in range(len(classes)):
+            if classes[i] not in classesSeen:
+                correctedClasses.append(classes[i])
+                classesSeen.add(classes[i])
+                correctedGrades.append(grades[i])
 
     c2g = dict(zip(correctedClasses, correctedGrades))
 
