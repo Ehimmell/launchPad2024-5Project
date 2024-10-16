@@ -2,8 +2,15 @@
   <input id = 'nameInput' class="searchbar-1" type="text" placeholder="Mystery Professor" [(ngModel)]="name">
   <div class = "results-list-1" *ngIf="results.length > 0">
     <div *ngFor="let result of results" class = "search-result-1">
-      <button class = "no-button-deco-1">{{result}}</button>
+      <button class = "no-button-deco-1" (click) = "onNameClick(result)">{{result}}</button>
     </div>
   </div>
   <button class = "searchbar-1" (click)="onSearch()">Search</button>
+</div>
+<div *ngIf="gpas.length > 0">
+  <app-professor-card
+    [classes]="classes"
+    [GPAs]="gpas"
+    [summary]="professorInfo[2]"
+    [name]="professorInfo[1]"></app-professor-card>
 </div>
