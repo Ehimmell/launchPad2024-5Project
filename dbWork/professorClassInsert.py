@@ -1,4 +1,5 @@
 import sqlite3
+import uuid
 
 def insertClass(classData, professorId):
     connection = sqlite3.connect('data.db')
@@ -6,6 +7,7 @@ def insertClass(classData, professorId):
     cursor = connection.cursor()
 
     name = f'professor{professorId}classList'
+    name = name.replace('-', '')
 
     cursor.execute(
                    f"SELECT count(name)"
@@ -16,29 +18,54 @@ def insertClass(classData, professorId):
     data = cursor.fetchone()
 
     if data[0] == 0:
-        print('not found, creating')
-        cursor.execute(
-            f"CREATE TABLE {name}("
-            f"id INTEGER PRIMARY KEY,"
-            f"name TEXT,"
-            f"gpa REAL)"
-        )
+        cursor.execute('\n'
+                       f'CREATE TABLE {name} (\n'
+                       f'    id INTEGER PRIMARY KEY,\n'
+                       f'    name TEXT,\n'
+                       f'    gpa REAL\n'
+                       f')\n')
 
-    for c in classData:
+        for c in classData:
 
-        classStr = ','.join([f"'{str(i)}'" if isinstance(i, str) else str(i) for i in c])
+            classStr = ','.join([f"'{str(i)}'" if isinstance(i, str) else str(i) for i in c])
 
-        cursor.execute(f"SELECT * FROM {name} WHERE id = {c[0]}")
+            cursor.execute(f"SELECT * FROM {name} WHERE id = {c[0]}")
+            data = cursor.fetchone()
+
+            if data is None:
+                cursor.execute(f'INSERT INTO {name} VALUES ({classStr})')
+
+                connection.commit()
+            else:
+                print("Data already exists in the table.")
+
+        connection.close()
+
+
+def insertProfessor(professorData):
+    connection = sqlite3.connect('data.db')
+
+    cursor = connection.cursor()
+    def checkIfExists(professorData):
+        cursor.execute(f'SELECT * FROM professors WHERE name = "{professorData[1]}"')
         data = cursor.fetchone()
+        return data
 
-        if data is None:
-            cursor.execute(f'INSERT INTO {name} VALUES ({classStr})')
+    if checkIfExists(professorData) is None:
 
-            connection.commit()
-        else:
-            print("Data already exists in the table.")
+        cursor = connection.cursor()
 
-    connection.close()
+        professorId = str(uuid.uuid4())
 
+        professorData.append(professorId)
 
-insertClass([[1, 'CS 101', 3.5], [2, 'CS 102', 3.0]], 1)
+        cursor.execute(f'INSERT INTO professors VALUES (?, ?, ?, ?)', tuple(professorData))
+
+        connection.commit()
+
+        return professorId
+
+    print("Data already exists in the table.")
+
+    return cursor.execute(f'SELECT classListId FROM professors WHERE name = "{professorData[1]}"').fetchone()[0]
+
