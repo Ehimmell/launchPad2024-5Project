@@ -4,12 +4,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from time import sleep
 
 
 def scrape(profName):
-    driver = se.webdriver.Chrome()
-    driver.get("https://www.ratemyprofessors.com")
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+
+    driver = webdriver.Chrome(options=chrome_options)
 
     def check_ad():
         try:
