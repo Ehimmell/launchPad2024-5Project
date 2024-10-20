@@ -10,8 +10,6 @@
 
 .env
 
-*.ipynb
-
 node_modules/
 
 .idea/
