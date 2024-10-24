@@ -1,0 +1,21 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.banner-container-1 {
+  align-items:center;
+  display:flex;
+  color:white;
+  font-family: 'Chalkboard SE', serif;
+  font-size:125%;
+}
+.banner-image-container-1 {
+  height:3vh;
+  width:3vh;
+  @apply bg-white rounded-full w-12 h-12 transition-all duration-200;
+  margin:10px;
+}
+
+.banner-image-container-1:hover {
+  @apply bg-white rounded-full w-16 h-16;
+}
