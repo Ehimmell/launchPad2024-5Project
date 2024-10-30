@@ -8,6 +8,8 @@
   color:white;
   font-family: 'Chalkboard SE', serif;
   font-size:125%;
+  position:sticky;
+  height:10vh;
 }
 .banner-image-container-1 {
   height:3vh;
@@ -17,5 +19,10 @@
 }
 
 .banner-image-container-1:hover {
-  @apply bg-white rounded-full w-16 h-16;
+  @apply bg-white rounded-full w-14 h-14;
+}
+
+.banner-button-1 {
+  position:sticky;
+  top:0;
 }

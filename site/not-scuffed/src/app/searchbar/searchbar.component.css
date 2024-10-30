@@ -1,18 +1,22 @@
 .search-back {
   position:absolute;
   z-index:1;
+  top:123vh;
+  left:31.7vw;
 }
 
 .search {
   position:absolute;
   z-index:2;
-  top:306px;
-  left:523px;
+  justify-self:center;
   height:10vh;
   width:28.5vw;
+  border-radius:5px;
+  margin-top:50vh;
 }
 
 .center {
   justify-content:center;
   display:flex;
+  margin-top:3vh;
 }

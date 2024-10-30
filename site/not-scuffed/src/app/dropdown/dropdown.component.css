@@ -1,0 +1,28 @@
+.header-container-2 {
+  display:flex;
+  align-items:center;
+  font-size:150%;
+  color:white;
+}
+
+.dropdown-container-1 {
+  margin-left:2vw;
+}
+
+.header-picture-1 {
+  height:5vh;
+  width:5vh;
+  margin-left:1vh;
+}
+
+.header-picture-2-flipped {
+  height:5vh;
+  width:5vh;
+  margin-left:1vh;
+  transform: scaleY(-1);
+}
+
+.content-container-1 {
+  color:dimgrey;
+  margin-left:3vw;
+}

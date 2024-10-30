@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-banner',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './banner.component.css'
 })
 export class BannerComponent {
+  constructor(private location: Location) {}
 
+  goBack(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

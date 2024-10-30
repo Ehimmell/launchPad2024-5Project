@@ -1,0 +1,39 @@
+.button-image-1 {
+  width:20vw;
+  height:45vh;
+}
+
+.button-container-1 {
+  display:flex;
+  justify-content:center;
+  justify-self:center;
+  position:relative;
+  z-index:1;
+}
+
+.button-text-1 {
+  margin-right:20vw;
+  color:white;
+}
+
+
+.text-display-1 {
+  display:flex;
+  z-index:2;
+  position:relative;
+  margin-top:-13.9vw;
+  font-weight:900;
+  font-size:175%;
+}
+
+.text-1 {
+  margin-left:26vw;
+}
+
+.text-2 {
+  margin-left:12vw;
+}
+
+.text-3 {
+  margin-left:12vw;
+}

@@ -1,0 +1,29 @@
+.search-for-professor-1 {
+  justify-self:center;
+  font-size:300%;
+  color:white;
+  margin-top:30vh;
+}
+
+.faqs-1 {
+  margin-top:80vh;
+  font-size:300%;
+  color:white;
+  margin-left:3vw;
+}
+
+.questions-1 {
+  margin-left:5vh;
+  padding-bottom:20vh;
+}
+
+.questions-1 > * {
+  margin-bottom:4vh;
+  margin-top:4vh;
+}
+
+.intro-1 {
+  margin-top:1vh;
+  color:dimgrey;
+  justify-self:center;
+}
