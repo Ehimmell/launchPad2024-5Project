@@ -55,30 +55,32 @@ export class FlyingPicturesComponent implements OnInit, OnDestroy {
   }
 
   showNextImage() {
-    this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
+  this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
 
-    const maxDistanceX = this.viewportWidth / 2;
-    const maxDistanceY = this.viewportHeight / 2;
+  const maxDistanceX = this.viewportWidth / 2;
+  const maxDistanceY = this.viewportHeight / 2;
 
-    this.randomX = Math.floor(Math.random() * (2 * maxDistanceX + 1)) - maxDistanceX;
-    this.randomY = Math.floor(Math.random() * (2 * maxDistanceY + 1)) - maxDistanceY;
+  this.randomX = Math.floor(Math.random() * (2 * maxDistanceX + 1)) - maxDistanceX;
+  this.randomY = Math.floor(Math.random() * (2 * maxDistanceY + 1)) - maxDistanceY;
 
-    this.initialTransform = 'translate(-50%, -50%) scale(0.1)';
-    this.finalTransform = `translate(calc(-50% + ${this.randomX}px), calc(-50% + ${this.randomY}px)) scale(1)`;
+  // Include rotation in the transforms
+  this.initialTransform = 'translate(-50%, -50%) scale(0.1) rotate(0deg)';
+  this.finalTransform = `translate(calc(-50% + ${this.randomX}px), calc(-50% + ${this.randomY}px)) scale(1) rotate(360deg)`;
 
-    this.transformStyle = this.initialTransform;
-    this.opacity = 0;
+  this.transformStyle = this.initialTransform;
+  this.opacity = 0;
 
-    this.currentImage = '';
+  this.currentImage = '';
+  setTimeout(() => {
+    this.currentImage = this.images[this.currentImageIndex];
+
     setTimeout(() => {
-      this.currentImage = this.images[this.currentImageIndex];
-
-      setTimeout(() => {
-        this.transformStyle = this.finalTransform;
-        this.opacity = 1;
-      }, 50);
+      this.transformStyle = this.finalTransform;
+      this.opacity = 1;
     }, 50);
-  }
+  }, 50);
+}
+
 
   ngOnDestroy(): void {
     if (isPlatformBrowser(this.platformId)) {
