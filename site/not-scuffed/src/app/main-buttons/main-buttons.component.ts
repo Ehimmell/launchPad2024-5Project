@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './main-buttons.component.css'
 })
 export class MainButtonsComponent {
+  search(): void {
+    window.scrollTo({ top: 550, behavior: 'smooth' });
+  }
 
+  qa(): void {
+    window.scrollTo({ top: 1000, behavior: 'smooth' });
+  }
 }

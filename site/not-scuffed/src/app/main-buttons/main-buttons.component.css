@@ -9,6 +9,10 @@
   height: calc(40vw * 0.5);
 }
 
+.button-with-text:hover {
+  width:19vw;
+}
+
 .justify {
   justify-content: center;
   justify-self: center;
