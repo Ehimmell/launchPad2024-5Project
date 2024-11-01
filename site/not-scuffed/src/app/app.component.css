@@ -3,6 +3,8 @@
   font-size:300%;
   color:white;
   margin-top:30vh;
+  position:relative;
+  z-index:1;
 }
 
 .faqs-1 {
@@ -26,4 +28,6 @@
   margin-top:1vh;
   color:dimgrey;
   justify-self:center;
+  position:relative;
+  z-index:1;
 }

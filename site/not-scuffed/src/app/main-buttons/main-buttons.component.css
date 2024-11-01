@@ -16,6 +16,8 @@
 .justify {
   justify-content: center;
   justify-self: center;
+  position:relative;
+  z-index:1;
 }
 .button-with-text .button-image {
   position: absolute;
