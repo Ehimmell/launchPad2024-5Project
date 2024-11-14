@@ -1,0 +1,33 @@
+<app-banner></app-banner>
+<h1 class = "search-for-professor-1">How's the Professor?</h1>
+<p class = "intro-1">Quickly find the best professors for your courses using review summaries, average grades, and more</p>
+<app-main-buttons>
+</app-main-buttons>
+<app-searchbar></app-searchbar>
+<h1 class = "faqs-1">Questions</h1>
+<div class = "questions-1">
+  <app-dropdown
+    header = "What is this site for?"
+    content = "This site is for finding out how professors are rated by students.">
+  </app-dropdown>
+  <app-dropdown
+    header = "How do you get your data and summaries?"
+    content = "We use a combination of data from BoilerGrades and ratemyprofessors.">
+  </app-dropdown>
+</div>
+<app-flying-pictures>
+</app-flying-pictures>
+<router-outlet />
+<div class="starry-background">
+  <div *ngFor="let star of stars" class="star"
+       [ngStyle]="{
+         'top.px': star.y,
+         'left.px': star.x,
+         'width.px': star.size,
+         'height.px': star.size
+       }">
+  </div>
+</div>
+<app-professor-card>
+</app-professor-card>
+

@@ -1,0 +1,52 @@
+.search-for-professor-1 {
+  justify-self:center;
+  font-size:300%;
+  color:white;
+  margin-top:30vh;
+  position:relative;
+  z-index:1;
+}
+
+.faqs-1 {
+  margin-top:80vh;
+  font-size:300%;
+  color:white;
+  margin-left:3vw;
+}
+
+.questions-1 {
+  margin-left:5vh;
+  padding-bottom:20vh;
+}
+
+.questions-1 > * {
+  margin-bottom:4vh;
+  margin-top:4vh;
+}
+
+.intro-1 {
+  margin-top:1vh;
+  color:dimgrey;
+  justify-self:center;
+  position:relative;
+  z-index:1;
+}
+g
+
+.starry-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+}

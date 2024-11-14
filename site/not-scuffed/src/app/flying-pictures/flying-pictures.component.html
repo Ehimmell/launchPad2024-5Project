@@ -1,0 +1,9 @@
+<div class="animation-container">
+  <img
+    *ngIf="currentImage"
+    [src]="currentImage"
+    class="flying-image"
+    [style.transform]="transformStyle"
+    [style.opacity]="opacity"
+  />
+</div>

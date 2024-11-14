@@ -1,0 +1,19 @@
+<div class = "dropdown-container-1">
+  <div *ngIf="!displayContent">
+    <div class = "header-container-2">
+      <h1>{{header}}</h1>
+      <button (click)="onToggle()">
+        <img class = 'header-picture-1' src = "/arrow.png">
+      </button>
+    </div>
+  </div>
+  <div *ngIf="displayContent">
+    <div class = "header-container-2">
+      <h1>{{header}}</h1>
+      <button (click)="onToggle()">
+        <img class = 'header-picture-2-flipped' src = "/arrow.png">
+      </button>
+    </div>
+      <p class = 'content-container-1'>{{content}}</p>
+  </div>
+</div>
