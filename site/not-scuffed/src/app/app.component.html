@@ -18,3 +18,16 @@
 <app-flying-pictures>
 </app-flying-pictures>
 <router-outlet />
+<div class="starry-background">
+  <div *ngFor="let star of stars" class="star"
+       [ngStyle]="{
+         'top.px': star.y,
+         'left.px': star.x,
+         'width.px': star.size,
+         'height.px': star.size
+       }">
+  </div>
+</div>
+<app-professor-card>
+</app-professor-card>
+

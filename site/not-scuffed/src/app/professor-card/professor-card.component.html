@@ -1,0 +1,10 @@
+<div class ="professor-card-1">
+  <h1 class = "professor-name">{{name}}</h1>
+  <div *ngFor="let class of classes; let i = index">
+    <h2 class = "class-name">{{class}}</h2>
+    <app-sliding-gpa-graph
+      [uniAvg]=3.0
+      [classAvg]=gpas[i]>
+    </app-sliding-gpa-graph>
+  </div>
+</div>

@@ -88,9 +88,10 @@ export class SlidingGpaGraphComponent implements AfterViewInit {
                 type: 'line',
                 xMin: this.classAvg,
                 xMax: this.classAvg,
-                borderColor: 'orange',
+                borderColor: 'white',
                 borderWidth: 2,
                 label: {
+                  color: 'white',
                   content: 'Class GPA',
                   enabled: true,
                   position: 'top'
