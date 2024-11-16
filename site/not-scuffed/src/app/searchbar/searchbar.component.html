@@ -1,9 +1,18 @@
-<div class = "center">
-    <img id = 'back' class = 'search-back' src = '/back-thing.png'>
-    <input [(ngModel)] = "name" (keyup.enter) = "onEnter()" id = 'searchInput' class = 'search' type = 'text' placeholder="Search your professor here...">
+<div class="center">
+  <img id="back" class="search-back" src="/back-thing.png">
+  <input
+    [(ngModel)]="name"
+    (keyup.enter)="onEnter()"
+    id="searchInput"
+    class="search"
+    type="text"
+    placeholder="Search your professor here..."
+  />
 </div>
-<div class = "results-list-1" *ngIf="results.length > 0">
-    <div *ngFor="let result of results" class = "search-result-1">
-      <button class = "no-button-deco-1" (click) = "onNameClick(result)">{{result}}</button>
-    </div>
+<div class="results-1">
+  <div *ngFor="let result of results">
+    <button class = "width">
+      <p class = "result">{{ result }}</p>
+    </button>
+  </div>
 </div>
