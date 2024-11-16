@@ -4,6 +4,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { FormsModule } from '@angular/forms';
+import {ProfessorCardComponent} from '../professor-card/professor-card.component';
 
 @Component({
   selector: 'app-searchbar',
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ProfessorCardComponent
   ],
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.css']
